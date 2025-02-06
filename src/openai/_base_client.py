@@ -991,7 +991,7 @@ class SyncAPIClient(BaseClient[httpx.Client, Stream[Any]]):
             kwargs["auth"] = self.custom_auth
 
         log.debug("Sending HTTP Request: %s %s", request.method, request.url)
-
+        print(request.url)
         try:
             response = self._client.send(
                 request,
